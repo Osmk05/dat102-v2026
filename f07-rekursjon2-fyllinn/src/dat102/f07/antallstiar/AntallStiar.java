@@ -16,8 +16,12 @@ public class AntallStiar {
 	}
 	
 	static int antallStiar(int startX, int startY, int sluttX, int sluttY) {
-		//TODO
-		return 0;
+		if(startX == sluttX || startY == sluttY){
+            return 1;
+        }
+		else{
+            return antallStiar(startX+1, startY, sluttX, sluttY) + antallStiar(startX, startY+1, sluttX, sluttY);
+        }
 	}
 
 

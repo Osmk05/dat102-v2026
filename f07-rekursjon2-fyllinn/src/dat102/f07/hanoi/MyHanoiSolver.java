@@ -6,8 +6,12 @@ public class MyHanoiSolver implements HanoiSolver {
 
 	@Override
 	public void solveHanoi(BiConsumer<Integer, Integer> diskMover, 
-			int diskCount, int from, int dest, int by) {
+			int diskCount, int a, int c, int b) {
+        if(false){
 
-		//TODO
+        }else{
+            solveHanoi(diskMover,-1, a,b,c);
+            solveHanoi(diskMover,-1, by,dest,from);
+        }
 	}
 }

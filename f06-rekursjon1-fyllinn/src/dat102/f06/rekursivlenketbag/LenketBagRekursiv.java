@@ -16,6 +16,9 @@ package dat102.f06.rekursivlenketbag;
  * Sist oppdatert 29. januar 2025
  */
 
+
+
+
 public class LenketBagRekursiv<T> implements BagADT<T> {
 	
 	private Node forste;
@@ -66,9 +69,18 @@ public class LenketBagRekursiv<T> implements BagADT<T> {
 	 * Utskrift.
 	 * Ikke en del av BagADT-kontrakten.
 	 */
-	public void skrivUt() {
 
-	}
+    public void skrivUt(){
+        skrivUt(forste);
+    }
+	public void skrivUt(Node temp) {
+        if(temp != null) {
+                System.out.println(temp.data);
+                skrivUt(temp.neste);
+            }
+
+        }
+    }
 
 	/************************************************************/
 	

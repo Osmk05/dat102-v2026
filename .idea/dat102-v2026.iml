@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/f06-rekursjon1-fyllinn/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/f07-rekursjon2-fyllinn/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
