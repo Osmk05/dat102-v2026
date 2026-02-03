@@ -33,25 +33,41 @@ public class LenketBagRekursiv<T> implements BagADT<T> {
 	 * Returnerer referanse til node hvis funnet, ellers null.
 	 */
 	private Node finnNode(T entry) {
-		//TODO
-		return null;
+		return finnNode(entry, forste);
 	}
+    private Node finnNode(T entry, Node start){
+        if(start == null){
+            return null;
+        }
+        else if (start.data.equals(entry)){
+            return start;
+        }else{
+            return finnNode(entry,start.neste);
+        }
+    }
 	
 	/*
 	 * Antall elementer som equals anEntry.
 	 */
 	@Override
 	public int getFrequencyOf(T entry) {
-		//TODO
-		return -1;
+		return getFrequencyOf(entry,forste);
 	}
+    public int getFrequencyOf(T entry, Node start ) {
+        if(start == null){
+            return 0;
+        }else if(start.data.equals(entry)){
+            return 1 + getFrequencyOf(entry, start.neste);
+        }
+        return getFrequencyOf(entry, start.neste);
+    }
 	
 	/*
 	 * Utskrift.
 	 * Ikke en del av BagADT-kontrakten.
 	 */
 	public void skrivUt() {
-		//TODO
+
 	}
 
 	/************************************************************/

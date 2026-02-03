@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
  * - public	void skrivUt(), ikke så lett å teste med JUnit.
  * 
  * Skrevet av Lars-Petter Helland, 23. januar 2024
- */
+*/
 class LenketBagTest {
 	
 	BagADT<String> tomBag;
